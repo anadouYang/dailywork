@@ -18,9 +18,11 @@ if res:
     print('{:^4}''{:^4}''{:^30}''{:^45}''{:^1}'.format(*li))
     record = cursor.fetchall()
     for dict in record:
-        for key in dict:
-            print(dict[key],end='\t')
-        print()
+        str='{username:^4}     {usertype}   {password}     {regtime}               {email}'.format(**dict)
+        print(str)
+        # for key in dict:
+        #     print(dict[key],end='\t')
+        # print()
         # print("username:{:^5},usertype:{:^5},password:{:^5},regtime:{:^5},email:{:^5}".format(**dict))
         # str1=str.format(**dict)
         # print(str1)
